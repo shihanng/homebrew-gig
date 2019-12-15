@@ -2,16 +2,16 @@
 class Gig < Formula
   desc "gitignore file generator"
   homepage "https://github.com/shihanng/gig"
-  version "0.8.0-alpha.0"
+  version "0.8.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/shihanng/gig/releases/download/v0.8.0-alpha.0/gig_0.8.0-alpha.0_Darwin_x86_64.tar.gz"
-    sha256 "a6b76a21c2f41fc1990203c0ed71e1a4627f7ee804923512144a15288724cbd5"
+    url "https://github.com/shihanng/gig/releases/download/v0.8.0/gig_0.8.0_Darwin_x86_64.tar.gz"
+    sha256 "cf2091c5be48a6f4f529769b4e723fe68b25262547c7e4882bf3ce1b9e0e57d4"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/shihanng/gig/releases/download/v0.8.0-alpha.0/gig_0.8.0-alpha.0_Linux_x86_64.tar.gz"
-      sha256 "a31e0e6156d2dbd84937def5eeac3719540a7258c16ff994dac95512eaa208f0"
+      url "https://github.com/shihanng/gig/releases/download/v0.8.0/gig_0.8.0_Linux_x86_64.tar.gz"
+      sha256 "718b2a2a6043bdfbc1d6aa6193d96dc6f3768d0fb1421544ae19c33f502d09da"
     end
   end
   

@@ -5,12 +5,20 @@
 class Gig < Formula
   desc "gitignore file generator"
   homepage "https://github.com/shihanng/gig"
-  version "0.8.2"
+  version "0.8.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/shihanng/gig/releases/download/v0.8.2/gig_0.8.2_Darwin_x86_64.tar.gz"
-      sha256 "fb69c83372fd0e40fc6a1fb88e110844a6ef5a8425730f6f1777140cc98a60d0"
+      url "https://github.com/shihanng/gig/releases/download/v0.8.3/gig_0.8.3_Darwin_x86_64.tar.gz"
+      sha256 "04aaea73bb2a863ca0f86f10cd0619f41dee4a6e419e23cf9b73c6c08b7d75f1"
+
+      def install
+        bin.install Dir['gig']
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/shihanng/gig/releases/download/v0.8.3/gig_0.8.3_Darwin_arm64.tar.gz"
+      sha256 "88953f9097e122ebeb436a9274b167e507c801ff83c0b5578f3c204c8262913c"
 
       def install
         bin.install Dir['gig']
@@ -20,16 +28,16 @@ class Gig < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/shihanng/gig/releases/download/v0.8.2/gig_0.8.2_Linux_x86_64.tar.gz"
-      sha256 "d2b514d35a605a91c7c479105636cb40e85dc518b5da866ef40b2d67a63e791c"
+      url "https://github.com/shihanng/gig/releases/download/v0.8.3/gig_0.8.3_Linux_x86_64.tar.gz"
+      sha256 "945dee1b48e66648bcfd1f404571706e363488605b977d5d0c6b555b7fb39d36"
 
       def install
         bin.install Dir['gig']
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shihanng/gig/releases/download/v0.8.2/gig_0.8.2_Linux_arm64.tar.gz"
-      sha256 "5065db2a87fba38928edf58fa0e67bf8ea1d900283fc0563d505ba86b671b715"
+      url "https://github.com/shihanng/gig/releases/download/v0.8.3/gig_0.8.3_Linux_arm64.tar.gz"
+      sha256 "9d4e7afe073e124344ad78b36373182fe7cb463938fb0bd22a1473b3a6a7cdb2"
 
       def install
         bin.install Dir['gig']
